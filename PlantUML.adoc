@@ -1,0 +1,13 @@
+[plantuml, sequence-diagram, svg]
+----
+@startuml
+actor User
+participant "Login Page" as LP
+participant "Auth Service" as AS
+
+User -> LP : Enter credentials
+LP -> AS : Validate credentials
+AS --> LP : Success
+LP --> User : Redirect to dashboard
+@enduml
+----
